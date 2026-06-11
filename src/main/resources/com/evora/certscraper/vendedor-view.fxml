@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.evora.certscraper.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<GridPane fx:controller="com.evora.certscraper.controller.VendedorController" xmlns:fx="http://javafx.com/fxml">
+    <Label text="CPF:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="cpfVendedorField" promptText="123.456.789-00" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Data Nascimento:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+    <TextField fx:id="dataNascimentoField" promptText="01/01/1900" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+    <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="nomeVendedorField" promptText="João da Silva" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="RG:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="rgVendedorField" promptText="12.345-67" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Orgão Expedidor:" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+    <TextField fx:id="orgaoExpedidorField" promptText="SSP/SP" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+
+    <Label text="CEP:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="cepEnderecoField" promptText="12.345-678" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Button text="Avançar" onAction="#onAvancarClick" GridPane.rowIndex="5"/>
+</GridPane>
